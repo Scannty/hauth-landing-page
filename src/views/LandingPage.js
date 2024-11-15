@@ -83,28 +83,32 @@ export default function LandingPage() {
                   An AI agent secured <br />
                   <span className="text-white">by you</span>
                 </h1>
-                <p className="text-white mb-3 lead">
+                <p className="text-white mb-3 lead" style={{ fontSize: 18 }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 </p>
                 <div className="btn-wrapper mb-3">
-                  <p className="category text-success d-inline">Free</p>
+                  <p className="category text-success d-inline">
+                    View Source Code
+                  </p>
                   <Button
                     className="btn-link"
                     color="success"
                     href="#pablo"
-                    onClick={(e) => e.preventDefault()}
+                    onClick={() =>
+                      window.open("https://www.github.com/Scannty")
+                    }
                     size="sm"
                   >
                     <i className="tim-icons icon-minimal-right" />
                   </Button>
                 </div>
                 <Button
-                  className="btn-round"
+                  className="btn"
                   color="success"
                   href="#pablo"
-                  onClick={(e) => e.preventDefault()}
+                  onClick={() => window.open("https://t.me/ai_agent_thai_bot")}
                   size="lg"
                 >
                   Start Trading
@@ -315,14 +319,6 @@ export default function LandingPage() {
             </Row>
           </Container>
         </section>
-        <section className="section section-lg section-safe">
-          <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path5.png")}
-          />
-        </section>
-        <Footer />
       </div>
     </>
   );

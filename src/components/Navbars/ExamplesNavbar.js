@@ -19,139 +19,115 @@ import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
-    Button,
-    Collapse,
-    NavbarBrand,
-    Navbar,
-    NavItem,
-    NavLink,
-    Nav,
-    Container,
-    Row,
-    Col,
-    UncontrolledTooltip,
+  Button,
+  Collapse,
+  NavbarBrand,
+  Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+  Container,
+  UncontrolledTooltip,
 } from "reactstrap";
 
 export default function ExamplesNavbar() {
-    const [collapseOpen, setCollapseOpen] = React.useState(false);
-    const [collapseOut, setCollapseOut] = React.useState("");
-    const [color, setColor] = React.useState("navbar-transparent");
-    React.useEffect(() => {
-        window.addEventListener("scroll", changeColor);
-        return function cleanup() {
-            window.removeEventListener("scroll", changeColor);
-        };
-    }, []);
-    const changeColor = () => {
-        if (
-            document.documentElement.scrollTop > 99 ||
-            document.body.scrollTop > 99
-        ) {
-            setColor("bg-info");
-        } else if (
-            document.documentElement.scrollTop < 100 ||
-            document.body.scrollTop < 100
-        ) {
-            setColor("navbar-transparent");
-        }
+  const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [collapseOut, setCollapseOut] = React.useState("");
+  const [color, setColor] = React.useState("navbar-transparent");
+  React.useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+    return function cleanup() {
+      window.removeEventListener("scroll", changeColor);
     };
-    const toggleCollapse = () => {
-        document.documentElement.classList.toggle("nav-open");
-        setCollapseOpen(!collapseOpen);
-    };
-    const onCollapseExiting = () => {
-        setCollapseOut("collapsing-out");
-    };
-    const onCollapseExited = () => {
-        setCollapseOut("");
-    };
-    return (
-        <Navbar
-            className={"fixed-top " + color}
-            color-on-scroll="100"
-            expand="lg"
+  }, []);
+  const changeColor = () => {
+    if (
+      document.documentElement.scrollTop > 99 ||
+      document.body.scrollTop > 99
+    ) {
+      setColor("bg-info");
+    } else if (
+      document.documentElement.scrollTop < 100 ||
+      document.body.scrollTop < 100
+    ) {
+      setColor("navbar-transparent");
+    }
+  };
+  const onCollapseExiting = () => {
+    setCollapseOut("collapsing-out");
+  };
+  const onCollapseExited = () => {
+    setCollapseOut("");
+  };
+  return (
+    <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
+      <Container>
+        <div className="navbar-translate">
+          <NavbarBrand to="/" id="navbar-brand" tag={Link}>
+            <span>HAUTH BOT• </span>
+            Most Secure Web3 AI Agent
+          </NavbarBrand>
+          <UncontrolledTooltip placement="bottom" target="navbar-brand">
+            An AI Agent for securing highest APY
+          </UncontrolledTooltip>
+        </div>
+        <Collapse
+          className={"justify-content-end " + collapseOut}
+          navbar
+          isOpen={collapseOpen}
+          onExiting={onCollapseExiting}
+          onExited={onCollapseExited}
         >
-            <Container>
-                <div className="navbar-translate">
-                    <NavbarBrand to="/" id="navbar-brand" tag={Link}>
-                        <span>SAFE BOT• </span>
-                        Most Secure Web3 AI Agent
-                    </NavbarBrand>
-                    <UncontrolledTooltip
-                        placement="bottom"
-                        target="navbar-brand"
-                    >
-                        An AI Agent for securing highest APY
-                    </UncontrolledTooltip>
-                </div>
-                <Collapse
-                    className={"justify-content-end " + collapseOut}
-                    navbar
-                    isOpen={collapseOpen}
-                    onExiting={onCollapseExiting}
-                    onExited={onCollapseExited}
-                >
-                    <Nav navbar>
-                        <NavItem className="p-0">
-                            <NavLink
-                                data-placement="bottom"
-                                href="https://x.com/decenter_rnd"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                title="Follow us on Twitter"
-                            >
-                                <i className="fab fa-twitter" />
-                                <p className="d-lg-none d-xl-none">Twitter</p>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem className="p-0">
-                            <NavLink
-                                data-placement="bottom"
-                                href="https://www.github.com/Scannty"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                title="Like us on Facebook"
-                            >
-                                <i className="fab fa-github" />
-                                <p className="d-lg-none d-xl-none">Github</p>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem className="p-0">
-                            <NavLink
-                                data-placement="bottom"
-                                href="https://t.me/ai_agent_thai_bot"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                title="Follow us on Instagram"
-                            >
-                                <i className="fab fa-telegram" />
-                                <p className="d-lg-none d-xl-none">Telegram</p>
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <Button
-                                className="nav-link d-none d-lg-block"
-                                color="primary"
-                                target="_blank"
-                                href="https://t.me/ai_agent_thai_bot"
-                            >
-                                <i className="tim-icons icon-spaceship" />{" "}
-                                Launch Bot Now
-                            </Button>
-                        </NavItem>
-                        {/* <NavItem>
-                            <NavLink tag={Link} to="/">
-                                Back to Kit
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/creativetimofficial/blk-design-system-react/issues">
-                                Have an issue?
-                            </NavLink>
-                        </NavItem> */}
-                    </Nav>
-                </Collapse>
-            </Container>
-        </Navbar>
-    );
+          <Nav navbar>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                href="https://x.com/decenter_rnd"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Follow us on Twitter"
+              >
+                <i className="fab fa-twitter" />
+                <p className="d-lg-none d-xl-none">Twitter</p>
+              </NavLink>
+            </NavItem>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                href="https://www.github.com/Scannty"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Like us on Facebook"
+              >
+                <i className="fab fa-github" />
+                <p className="d-lg-none d-xl-none">Github</p>
+              </NavLink>
+            </NavItem>
+            <NavItem className="p-0">
+              <NavLink
+                data-placement="bottom"
+                href="https://t.me/ai_agent_thai_bot"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Follow us on Instagram"
+              >
+                <i className="fab fa-telegram" />
+                <p className="d-lg-none d-xl-none">Telegram</p>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <Button
+                className="nav-link d-none d-lg-block"
+                color="primary"
+                target="_blank"
+                href="https://t.me/ai_agent_thai_bot"
+              >
+                <i className="tim-icons icon-spaceship" /> Launch Bot Now
+              </Button>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Container>
+    </Navbar>
+  );
 }
