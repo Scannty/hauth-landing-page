@@ -84,9 +84,11 @@ export default function LandingPage() {
                   <span className="text-white">by you</span>
                 </h1>
                 <p className="text-white mb-3 lead" style={{ fontSize: 18 }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  With AI Agents becoming an integral part of our on-chain lives, it is important to secure them.
+                  Human Authenticated AI Agents enable you to be the one in charge, get asked whenever it matters.
+                  <br />
+                  <br />
+                  Trust your AI agent, but verify.
                 </p>
                 <div className="btn-wrapper mb-3">
                   <p className="category text-success d-inline">
@@ -111,7 +113,7 @@ export default function LandingPage() {
                   onClick={() => window.open("https://t.me/ai_agent_thai_bot")}
                   size="lg"
                 >
-                  Start Trading
+                  Start Using
                 </Button>
               </Col>
               <Col lg="3" md="5">
@@ -148,7 +150,7 @@ export default function LandingPage() {
                               <div className="numbers">
                                 <CardTitle tag="p">3,237</CardTitle>
                                 <p />
-                                <p className="card-category">Awards</p>
+                                <p className="card-category">Conditions</p>
                               </div>
                             </Col>
                           </Row>
@@ -168,7 +170,7 @@ export default function LandingPage() {
                               <div className="numbers">
                                 <CardTitle tag="p">3,653</CardTitle>
                                 <p />
-                                <p className="card-category">Commits</p>
+                                <p className="card-category">Authentications</p>
                               </div>
                             </Col>
                           </Row>
@@ -190,7 +192,7 @@ export default function LandingPage() {
                               <div className="numbers">
                                 <CardTitle tag="p">593</CardTitle>
                                 <p />
-                                <p className="card-category">Presents</p>
+                                <p className="card-category">Agents</p>
                               </div>
                             </Col>
                           </Row>
@@ -210,7 +212,7 @@ export default function LandingPage() {
                               <div className="numbers">
                                 <CardTitle tag="p">10,783</CardTitle>
                                 <p />
-                                <p className="card-category">Forks</p>
+                                <p className="card-category">Transactions</p>
                               </div>
                             </Col>
                           </Row>
@@ -222,19 +224,17 @@ export default function LandingPage() {
                 <Col md="6">
                   <div className="pl-md-5">
                     <h1>
-                      Large <br />
-                      Achivements
+                      Human Secured <br />
+                      AI Agents
                     </h1>
                     <p>
-                      I should be capable of drawing a single stroke at the
-                      present moment; and yet I feel that I never was a greater
-                      artist than now.
+                      Using our human authentication system, you can secure your AI agent
+                      and protect yourself from possible unwanted actions. Set transaction
+                      value limits, gas limits, contract allowlist and more.
                     </p>
                     <br />
                     <p>
-                      When, while the lovely valley teems with vapour around me,
-                      and the meridian sun strikes the upper surface of the
-                      impenetrable foliage of my trees, and but a few stray.
+                      Sleep well knowing that your AI agent is secured by you.
                     </p>
                     <br />
                     <a
@@ -270,19 +270,17 @@ export default function LandingPage() {
           <Container>
             <Row className="justify-content-center">
               <Col lg="12">
-                <h1 className="text-center">Your best benefit</h1>
+                <h1 className="text-center">Features</h1>
                 <Row className="row-grid justify-content-center">
                   <Col lg="3">
                     <div className="info">
                       <div className="icon icon-primary">
                         <i className="tim-icons icon-money-coins" />
                       </div>
-                      <h4 className="info-title">Low Commission</h4>
+                      <h4 className="info-title">Monitor Transactions</h4>
                       <hr className="line-primary" />
                       <p>
-                        Divide details about your work into parts. Write a few
-                        lines about each one. A paragraph describing a feature
-                        will.
+                        Monitor all actions of your AI agent. Set limits and conditions on transactions.
                       </p>
                     </div>
                   </Col>
@@ -291,12 +289,10 @@ export default function LandingPage() {
                       <div className="icon icon-warning">
                         <i className="tim-icons icon-chart-pie-36" />
                       </div>
-                      <h4 className="info-title">High Incomes</h4>
+                      <h4 className="info-title">Providing Human 2FA Security</h4>
                       <hr className="line-warning" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing feature will be a feature.
+                        Human authentication enables you to be the one in charge, get asked whenever it matters.
                       </p>
                     </div>
                   </Col>
@@ -305,12 +301,10 @@ export default function LandingPage() {
                       <div className="icon icon-success">
                         <i className="tim-icons icon-single-02" />
                       </div>
-                      <h4 className="info-title">Verified People</h4>
+                      <h4 className="info-title">Manage Multiple Agents</h4>
                       <hr className="line-success" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing be enough.
+                        Register multiple AI agents and manage them all from one place. Set different rules for each agent.
                       </p>
                     </div>
                   </Col>
